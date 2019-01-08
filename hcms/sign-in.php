@@ -18,8 +18,7 @@ if(isset($_POST['login'])){
     $formPass = validateFormData($_POST['password']);
     
     //conect to database
-
-    $conn = mysqli_connect('localhost','root','','clinic');
+include 'includes/connection.php';
     
     
     //make query
