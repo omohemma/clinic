@@ -18,7 +18,7 @@ if(isset($_POST['login'])){
     $formPass = validateFormData($_POST['password']);
     
     //conect to database
-include 'includes/connection.php';
+    include 'includes/connection.php';
     
     
     //make query
@@ -123,45 +123,49 @@ include 'includes/connection.php';
         <div class="login-box login-sidebar">
             <div class="white-box">
                 <?php echo @$loginError; ?>
-                <form class="form-horizontal " id="loginform"  method="post">
+                <form class="form-horizontal " id="loginform" method="post">
                     <br><br><br><br><br>
-                    <a href="javascript:void(0)" class="text-center db"><img src="plugins/images/eliteadmin-logo-dark.png" alt="Home" />
-                        <br/><img src="plugins/images/eliteadmin-text-dark.png" alt="Home" /></a>
+                    <a href="javascript:void(0)" class="text-center db"><img src="plugins/images/eliteadmin-logo-dark.png"
+                            alt="Home" />
+                        <br /><img src="plugins/images/eliteadmin-text-dark.png" alt="Home" /></a>
 
-                        <div class="form-group m-t-40">
-                            <div class="col-xs-12">
-                                <input class="form-control" type="text" required="" name="username" placeholder="Username"> </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-xs-12">
-                                    <input class="form-control" type="password" name="password" required="" placeholder="Password"> </div>
-                                </div>
-
-                                <div class="form-group text-center m-t-20">
-                                    <div class="col-xs-12">
-                                        <button type="submit" name="login" class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Log In</button>
-                                    </div>
-                                </div>
-                            </form>
+                    <div class="form-group m-t-40">
+                        <div class="col-xs-12">
+                            <input class="form-control" type="text" required="" name="username" placeholder="Username">
                         </div>
                     </div>
-                </section>
-                <!-- jQuery -->
-                <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
-                <!-- Bootstrap Core JavaScript -->
-                <script src="bootstrap/dist/js/tether.min.js"></script>
-                <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-                <script src="plugins/bower_components/bootstrap-extension/js/bootstrap-extension.min.js"></script>
-                <!-- Menu Plugin JavaScript -->
-                <script src="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
-                <!--slimscroll JavaScript -->
-                <script src="js/jquery.slimscroll.js"></script>
-                <!--Wave Effects -->
-                <script src="js/waves.js"></script>
-                <!-- Custom Theme JavaScript -->
-                <script src="js/custom.min.js"></script>
-                <!--Style Switcher -->
-                <script src="plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
-            </body>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input class="form-control" type="password" name="password" required="" placeholder="Password">
+                        </div>
+                    </div>
 
-            </html>
+                    <div class="form-group text-center m-t-20">
+                        <div class="col-xs-12">
+                            <button type="submit" name="login" class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light"
+                                type="submit">Log In</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- jQuery -->
+    <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bootstrap/dist/js/tether.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="plugins/bower_components/bootstrap-extension/js/bootstrap-extension.min.js"></script>
+    <!-- Menu Plugin JavaScript -->
+    <script src="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/custom.min.js"></script>
+    <!--Style Switcher -->
+    <script src="plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+</body>
+
+</html>

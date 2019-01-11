@@ -36,7 +36,14 @@ include 'includes/header.php';
           <div class="white-box">
             <div class="r-icon-stats"> <i class="ti-user bg-megna"></i>
               <div class="bodystate">
-                <h4>370</h4> <span class="text-muted">Patients</span> </div>
+                <h4>
+                <?php 
+
+$query = mysqli_query($conn,"SELECT * FROM patients");
+echo mysqli_num_rows($query);
+?>
+                </h4> 
+                <span class="text-muted">Patients</span> </div>
               </div>
             </div>
           </div>
@@ -44,7 +51,14 @@ include 'includes/header.php';
             <div class="white-box">
               <div class="r-icon-stats"> <i class="ti-shopping-cart bg-info"></i>
                 <div class="bodystate">
-                  <h4>342</h4> <span class="text-muted">Visited Today</span> </div>
+                  <h4>
+                  <?php 
+$date = date("Y-m-d");
+                        $query = mysqli_query($conn,"SELECT * FROM appointment WHERE created_at = '$date'");
+                        echo mysqli_num_rows($query);
+                        ?>
+                  </h4> 
+                  <span class="text-muted">Visited Today</span> </div>
                 </div>
               </div>
             </div>
@@ -52,7 +66,14 @@ include 'includes/header.php';
               <div class="white-box">
                 <div class="r-icon-stats"> <i class="ti-wallet bg-success"></i>
                   <div class="bodystate">
-                    <h4>13</h4> <span class="text-muted">Attended To </span> </div>
+                    <h4>
+                    <?php 
+$date = date("Y-m-d");
+                        $query = mysqli_query($conn,"SELECT * FROM appointment WHERE created_at = '$date' and attended_to = 'yes'");
+                        echo mysqli_num_rows($query);
+                        ?>
+                    </h4> 
+                    <span class="text-muted">Attended To </span> </div>
                   </div>
                 </div>
               </div>
@@ -60,7 +81,14 @@ include 'includes/header.php';
                 <div class="white-box">
                   <div class="r-icon-stats"> <i class="ti-wallet bg-inverse"></i>
                     <div class="bodystate">
-                      <h4>$34650</h4> <span class="text-muted">Hospital Earning</span> </div>
+                      <h4>
+                      <?php 
+$date = date("Y-m-d");
+                        $query = mysqli_query($conn,"SELECT * FROM users WHERE  designation = 'staff'");
+                        echo mysqli_num_rows($query);
+                        ?>
+                      </h4> 
+                      <span class="text-muted">Medical Staff</span> </div>
                     </div>
                   </div>
                 </div>

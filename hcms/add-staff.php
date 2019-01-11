@@ -259,7 +259,18 @@ include 'includes/header.php';
                                                     <div class="form-group">
                                                         <label class="control-label col-md-3">File No.</label>
                                                         <div class="col-md-9">
-                                                            <input type="text" name="file_no" class="form-control" value ="56/bg/n6" disabled="">  </div>
+                                                        <?php 
+														
+														$conn = mysqli_connect('us-cdbr-iron-east-01.cleardb.net','b55dc263b6abad','4056a8d5','heroku_6ce1e53c155f864');
+														$query = "SELECT * FROM patients";
+														$result = mysqli_query($conn,$query);
+
+														$registered = mysqli_num_rows($result);
+														$registered += 1;
+
+
+														?>
+                                                            <input type="text" name="file_no" class="form-control" value="<?php echo date("m")."/".$registered; ?>"  readonly>  </div>
                                                         </div>
                                                     </div>
 
@@ -271,7 +282,7 @@ include 'includes/header.php';
                                                                    <option selected="" disabled="">Choose Role</option>
                                                                    <option value="doctor">Doctor</option>
                                                                    <option value="medical-record">Medical Record</option>
-                                                                   
+                                                                   <option value="nurses">Nurses</option>
                                                                </select> </div>
                                                            </div>
                                                        </div>
@@ -291,7 +302,7 @@ include 'includes/header.php';
                                                                 <select class="form-control" data-placeholder="Choose Speciality" tabindex="1" name="speciality" required="required">
 
                                                                     <option selected="" disabled="">Choose Speciality</option>
-                                                                    <option value="N/A">N/A</option>
+                                                                    <option value="Others">Others</option>
                                                                     <?php 
 
                                                                     $rows = $obj->fetch_record("department");
@@ -301,6 +312,7 @@ include 'includes/header.php';
                                                                         ?>
                                                                         <option value="<?php echo $row['dept_name']; ?>"><?php echo $row['dept_name'] ; ?></option>
                                                                     <?php } ?>
+                                                                
                                                                 </select>
                                                             </div>
                                                         </div>
