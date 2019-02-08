@@ -111,28 +111,28 @@ include 'includes/header.php';
                                                             <label class="control-label col-md-3">Gender</label>
                                                             <div class="col-md-9">
                                                                 <select class="form-control" name="gender">
-                                                                 <option selected="" disabled="">Choose Gender</option>
-                                                                 <option value="Male">Male</option>
-                                                                 <option value="Female">Female</option>
-                                                             </select> </div>
-                                                         </div>
-                                                     </div>
-                                                     <!--/span-->
+                                                                   <option selected="" disabled="">Choose Gender</option>
+                                                                   <option value="Male">Male</option>
+                                                                   <option value="Female">Female</option>
+                                                               </select> </div>
+                                                           </div>
+                                                       </div>
+                                                       <!--/span-->
 
-                                                     <!--/span-->
-                                                 </div>
+                                                       <!--/span-->
+                                                   </div>
 
-                                                 <div class="row">
+                                                   <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label class="control-label col-md-3">Date of Birth</label>
                                                             <div class="col-md-9">
-                                                               <input type="text" name="dob" class="form-control mydatepicker" placeholder="Date of Birth">
-                                                           </div>
-                                                       </div>
-                                                   </div>
-                                                   <!--/span-->
-                                                   <div class="col-md-6">
+                                                             <input type="text" name="dob" class="form-control mydatepicker" placeholder="Date of Birth">
+                                                         </div>
+                                                     </div>
+                                                 </div>
+                                                 <!--/span-->
+                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="control-label col-md-3">Address</label>
                                                         <div class="col-md-9">
@@ -255,21 +255,20 @@ include 'includes/header.php';
                                                 <div class="row">
 
 
-                                                 <div class="col-md-6">
+                                                   <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="control-label col-md-3">File No.</label>
                                                         <div class="col-md-9">
-                                                        <?php 
-														
-														$conn = mysqli_connect('localhost','root','','clinic');
-														$query = "SELECT * FROM patients";
-														$result = mysqli_query($conn,$query);
+                                                            <?php 
+                                                            $conn = mysqli_connect('us-cdbr-iron-east-01.cleardb.net','b55dc263b6abad','4056a8d5','heroku_6ce1e53c155f864');
+                                                            $query = "SELECT * FROM patients";
+                                                            $result = mysqli_query($conn,$query);
 
-														$registered = mysqli_num_rows($result);
-														$registered += 1;
+                                                            $registered = mysqli_num_rows($result);
+                                                            $registered += 1;
 
 
-														?>
+                                                            ?>
                                                             <input type="text" name="file_no" class="form-control" value="<?php echo date("m")."/".$registered; ?>"  readonly>  </div>
                                                         </div>
                                                     </div>
@@ -279,20 +278,20 @@ include 'includes/header.php';
                                                             <label class="control-label col-md-3">Role</label>
                                                             <div class="col-md-9">
                                                                 <select class="form-control" name="role" required="required">
-                                                                   <option selected="" disabled="">Choose Role</option>
-                                                                   <option value="doctor">Doctor</option>
-                                                                   <option value="medical-record">Medical Record</option>
-                                                                   <option value="nurses">Nurses</option>
-                                                               </select> </div>
-                                                           </div>
-                                                       </div>
+                                                                 <option selected="" disabled="">Choose Role</option>
+                                                                 <option value="doctor">Doctor</option>
+                                                                 <option value="medical-record">Medical Record</option>
+                                                                 <option value="nurses">Nurses</option>
+                                                             </select> </div>
+                                                         </div>
+                                                     </div>
 
-                                                       <!--/span-->
+                                                     <!--/span-->
 
-                                                       <!--/span-->
-                                                   </div>
-                                                   <!--/row-->
-                                                   <div class="row">
+                                                     <!--/span-->
+                                                 </div>
+                                                 <!--/row-->
+                                                 <div class="row">
 
 
                                                     <div class="col-md-6">
@@ -312,7 +311,7 @@ include 'includes/header.php';
                                                                         ?>
                                                                         <option value="<?php echo $row['dept_name']; ?>"><?php echo $row['dept_name'] ; ?></option>
                                                                     <?php } ?>
-                                                                
+                                                                    
                                                                 </select>
                                                             </div>
                                                         </div>
