@@ -18,12 +18,7 @@ include 'hcms/includes/connection.php';
 					<h2>about us</h2>
 					<div class="common-padd-top about-section-para">
 						<p>
-							Lorem Ipsum is simply dummy text of the
-							printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-							text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-							it to make a type specimen book. It has survived not only five centuries, but also the
-							leap into electronic typesetting,
-							remaining essentially unchanged. It was popularised.
+							Mobile Healthcare Management is an automated healthcare sytem that facilutates good and quick proceeding in the health sector. iItIt also promotes eco-friendliness within staffs, herby ensuring that patients receive  optimum treatment
 						</p>
 					</div>
 				</div>

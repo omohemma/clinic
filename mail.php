@@ -5,7 +5,7 @@
 		
 		$service = '';
 		$number = '';
-	
+		
 		if(isset($_POST['selectOption']))
 		{
 			$service = "<tr><td>Service: ".$_POST['selectOption']."</td></tr>";
@@ -15,22 +15,22 @@
 		{
 			$number = "<tr><td>Phone no.: ".$_POST['phoneNo']."</td></tr>";
 		}
-	
+		
 		$data['success'] = true;
 		
 		$data['messageSuccess'] = 'Hey! Thanks for reaching out. I will get back to you soon';
 		
 		// CHANGE THE TWO LINES BELOW
 		
-		$email_to = "shyam.sunder@sparxtechnologies.com";
+		$email_to = "precy1621@gmail.com";
 		
 		$email_subject = $_POST['subject']; // required
-	
+		
 		$name = $_POST['name']; // required
 		
 		$email_from = $_POST['email']; // required
 		
-		$cc = "kuldeep@sparxtechnologies.com";
+		//$cc = "kuldeep@sparxtechnologies.com";
 		
 		$message = $_POST['textarea']; // required
 		
@@ -59,21 +59,21 @@
 		
 		@mail($email_to, $email_subject, $email_message, $headers);
 	//}
-	
+		
 	// return a response ===========================================================
 	// response if there are errors
-	
-	if (! empty($errors)) {
 		
+		if (! empty($errors)) {
+			
 		// if there are items in our errors array, return those errors
-		
-		$data['success'] = false;
-		
-		$data['errors'] = $errors;
-		
-		$data['messageError'] = '*Note: Please check the fields in red';
-		
-	} 
+			
+			$data['success'] = false;
+			
+			$data['errors'] = $errors;
+			
+			$data['messageError'] = '*Note: Please check the fields in red';
+			
+		} 
 	// return all our data to an AJAX call
-	echo json_encode($data);
-?>
+		echo json_encode($data);
+		?>
